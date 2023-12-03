@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(30deg, #433ba0, #4dc2c8);
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.number {
+  display: flex;
+  margin: 100px 0px 0px 100px;
+}
+.first {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  bottom: 34px;
+  right: 45px;
+  background-color: #fff;
+  transform: rotate(134deg);
+  border-radius: 3px;
+  z-index: 0;
+}
+.second {
+  position: relative;
+  width: 25px;
+  height: 100px;
+  bottom: 45px;
+  right: 60px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: -2px 0px 25px #747574;
+  z-index: 2;
+}
+.third,
+.fourth {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 25px solid #fff;
+  border-radius: 50px;
+}
+.third {
+  z-index: 1;
+  bottom: 45px;
+  right: 70px;
+  box-shadow: 2px 0px 10px #747574;
+}
+.fourth {
+  z-index: 0;
+  bottom: 45px;
+  right: 85px;
+  box-shadow: 2px 0px 10px #747574;
+}
+.big {
+  position: relative;
+  font-family: "Courier Prime", monospace;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 65pt;
+  font-weight: 900;
+  bottom: 50px;
+  left: 75px;
+  z-index: 3;
+}
+.small {
+  position: relative;
+  font-family: "Courier Prime", monospace;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 900;
+  bottom: 70px;
+  left: 75px;
+}
