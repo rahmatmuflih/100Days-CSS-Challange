@@ -124,14 +124,14 @@
 
 @keyframes sun {
   0% {
-    transform: rotate(0deg) translatex(-120px) rotate(0deg);
+    transform: rotate(0deg) translatex(-120px);
   }
-  50%,
-  75% {
-    transform: rotate(70deg) translatex(-110px) rotate(-70deg);
+  30%,
+  32% {
+    transform: rotate(60deg) translatex(-115px);
   }
   100% {
-    transform: rotate(180deg) translatex(-120px) rotate(-180deg);
+    transform: rotate(180deg) translatex(-120px);
   }
 }
 
@@ -151,7 +151,7 @@
 
 @keyframes pyramid2 {
   0%,
-  20% {
+  30% {
     border-bottom-color: #787676;
   }
   50%,

@@ -1,0 +1,24 @@
+.parent {
+  width: 400px;
+  height: 400px;
+  margin: 150px auto;
+  border: 2px dashed blue;
+  border-radius: 200px;
+}
+.child {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 150px -50px;
+  animation: orbit 5s ease-in-out infinite;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translatex(0px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg) translatex(0px) rotate(-180deg);
+  }
+}
