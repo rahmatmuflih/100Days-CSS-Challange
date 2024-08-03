@@ -73,7 +73,7 @@
   border-right: 0px solid transparent;
   border-bottom: 49px solid #f3f3f3;
   transform: skewx(10deg);
-  bottom: 169px;
+  bottom: 168px;
   left: 36px;
   z-index: 1;
   animation: pyramid1 5s ease-in-out infinite;
@@ -88,7 +88,7 @@
   border-right: 50px solid transparent;
   border-bottom: 50px solid #dddada;
   transform: skewx(10deg);
-  bottom: 239px;
+  bottom: 238px;
   left: 100px;
   z-index: 1;
   animation: pyramid2 5s ease-in-out infinite;
