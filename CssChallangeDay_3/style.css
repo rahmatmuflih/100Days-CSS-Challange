@@ -40,6 +40,7 @@
   height: 140px;
   background-color: #7ddffc;
   z-index: 0;
+  animation: sky 5s ease-in-out infinite;
 }
 
 .ground {
@@ -48,6 +49,7 @@
   height: 60px;
   background-color: #f0de75;
   z-index: 2;
+  animation: ground 5s ease-in-out infinite;
 }
 
 .sun {
@@ -94,14 +96,10 @@
 
 .shadow {
   position: relative;
-  width: 0;
-  height: 0;
-  border-top: 20px solid #c0b25e;
-  border-left: 48px solid transparent;
-  border-right: 66px solid transparent;
-  border-bottom: 20px solid transparent;
-  bottom: 240px;
-  left: 41px;
+  width: 200px;
+  height: 200px;
+  background-color: #c0b25e;
+  bottom: 239px;
   z-index: 2;
   animation: shadow 5s ease-in-out infinite;
 }
@@ -126,9 +124,9 @@
   0% {
     transform: rotate(0deg) translatex(-120px);
   }
-  30%,
-  32% {
-    transform: rotate(60deg) translatex(-115px);
+  50%,
+  60% {
+    transform: rotate(60deg) translatex(-110px);
   }
   100% {
     transform: rotate(180deg) translatex(-120px);
@@ -137,11 +135,13 @@
 
 @keyframes pyramid1 {
   0% {
+    border-bottom-color: #787676;
+  }
+  20% {
     border-bottom-color: #f3f3f3;
   }
-  25%,
-  50%,
-  75% {
+  65%,
+  70% {
     border-bottom-color: #f2efef;
   }
   100% {
@@ -150,15 +150,62 @@
 }
 
 @keyframes pyramid2 {
-  0%,
-  30% {
+  0% {
     border-bottom-color: #787676;
   }
-  50%,
-  75% {
+  70%,
+  80% {
     border-bottom-color: #e8e5e5;
   }
+  90% {
+    border-bottom-color: #d5d4d4;
+  }
   100% {
-    border-bottom-color: #f3f3f3;
+    border-bottom-color: #787676;
+  }
+}
+@keyframes shadow {
+  0% {
+    clip-path: polygon(35px 0, 155px 0, 185px 0);
+  }
+  50%,
+  60% {
+    clip-path: polygon(35px 0, 155px 0, 185px 20px);
+  }
+  80% {
+    clip-path: polygon(35px 0, 155px 0, 12px 20px);
+  }
+  100% {
+    clip-path: polygon(35px 0, 155px 0, 10px 0);
+  }
+}
+@keyframes sky {
+  0% {
+    background-color: #386573;
+  }
+  20% {
+    background-color: #5398ad;
+  }
+  50%,
+  90% {
+    background-color: #7ddffc;
+  }
+  100% {
+    background-color: #386573;
+  }
+}
+@keyframes ground {
+  0% {
+    background-color: #c0b25e;
+  }
+  20% {
+    background-color: #cdbd62;
+  }
+  50%,
+  90% {
+    background-color: #f0de75;
+  }
+  100% {
+    background-color: #c0b25e;
   }
 }
