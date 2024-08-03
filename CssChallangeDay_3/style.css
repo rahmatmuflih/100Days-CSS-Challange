@@ -172,8 +172,8 @@
   60% {
     clip-path: polygon(35px 0, 155px 0, 185px 20px);
   }
-  80% {
-    clip-path: polygon(35px 0, 155px 0, 12px 20px);
+  85% {
+    clip-path: polygon(35px 0, 155px 0, 12px 10px);
   }
   100% {
     clip-path: polygon(35px 0, 155px 0, 10px 0);
