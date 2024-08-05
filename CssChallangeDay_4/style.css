@@ -1,3 +1,7 @@
+:root {
+  --animation: cubic-bezier(0.21, 0.98, 0.6, 0.99);
+}
+
 .frame {
   position: absolute;
   top: 50%;
@@ -39,8 +43,7 @@
   height: 100px;
   background-color: #fff;
   border-radius: 50px;
-  box-shadow: 5px 5px 40px #333;
-  animation: first-child 5s ease-in-out infinite;
+  animation: first-child 2s var(--animation) infinite alternate;
 }
 
 .container div:nth-child(2) {
@@ -49,8 +52,7 @@
   height: 50px;
   background-color: #fff;
   border-radius: 25px;
-  box-shadow: 5px 5px 40px #333;
-  animation: second-child 5s ease-in-out infinite;
+  animation: second-child 2s var(--animation) infinite alternate;
 }
 
 .container div:last-child {
@@ -59,50 +61,38 @@
   height: 25px;
   background-color: #fff;
   border-radius: 15px;
-  box-shadow: 5px 10px 40px 2px #000;
-  animation: last-child 5s ease-in-out infinite;
+  animation: last-child 2s var(--animation) infinite alternate;
 }
 
 @keyframes first-child {
-  0% {
+  0%,
+  10% {
     transform: scale(0);
   }
-  10%,
-  60% {
-    transform: scale(1);
-  }
-  70%,
   100% {
-    transform: scale(0);
+    transform: scale(1);
+    box-shadow: 4px 7px 10px #47424283;
   }
 }
 
 @keyframes second-child {
   0%,
-  10% {
+  40% {
     transform: scale(0);
   }
-  20%,
-  50% {
-    transform: scale(1);
-  }
-  60%,
   100% {
-    transform: scale(0);
+    transform: scale(1);
+    box-shadow: 4px 7px 10px #47424283;
   }
 }
 
 @keyframes last-child {
   0%,
-  20% {
+  70% {
     transform: scale(0);
   }
-  30%,
-  40% {
-    transform: scale(1);
-  }
-  50%,
   100% {
-    transform: scale(0);
+    transform: scale(1);
+    box-shadow: 4px 7px 10px #47424283;
   }
 }
