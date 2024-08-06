@@ -1,0 +1,181 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+:root {
+    --animation: cubic-bezier(.21,.98,.6,.99);
+  }
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 400px;
+  height: 400px;
+  background-image: linear-gradient(45deg, #edbd6b, #d08753);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-profile{
+    display: flex;
+    width: 300px;
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.profile{
+    width: 189px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #847263;
+    padding-top: 25px;
+}
+
+.profile-photo{
+    width: 85px;
+    height: 85px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-border-1{
+    position: absolute;
+    width: 79px;
+    height: 79px;
+    border-top: #7b6854 solid 1px;
+    border-left: #7b6854 solid 1px;
+    border-right:  transparent solid 1px;
+    border-bottom: #7b6854 solid 1px;
+    border-radius: 79px;
+    padding: 2px;
+    transition: transform 3s var(--animation);
+}
+
+.outer-border-2{
+    position: absolute;
+    width: 77px;
+    height: 77px;
+    border-top: #7b6854 solid 1px;
+    border-left: transparent solid 1px;
+    border-right: #7b6854 solid 1px;
+    border-bottom: #7b6854 solid 1px;
+    border-radius: 77px;
+    transition: transform 3s var(--animation);
+}
+
+.profile-photo img{
+    position: absolute;
+    overflow: hidden;
+    margin: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+.profile-photo:hover .outer-border-1{
+    transform: rotate(360deg);
+}
+
+.profile-photo:hover .outer-border-2{
+    transform: rotate(-360deg);
+}
+
+.profile-name h1{
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.profile-name h2{
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 100;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.profile-button{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.profile-button button{
+    padding: 7px 25px;
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: 600;
+    color: #847263;
+    border-radius: 20px;
+    border: 1px solid #847263;
+    cursor: pointer;
+    background-color: white;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.profile-button button:hover{
+    background-color: #847263;
+    color: white;
+}
+
+.insights{
+    display: flex;
+    flex-direction: column;
+}
+
+.insights-item{
+    background-color: #f5e8df;
+    padding: 30px 40px;
+		height: 100px;
+    cursor: pointer;
+    color: #847263;
+    transition: background-color 0.4s ease-in-out;
+}
+
+.insights-item:hover{
+    background-color: #d6c2b4;
+}
+
+.insights-item:nth-child(2), .insights-item:last-child{
+    margin-top: 2px;
+}
+
+.number{
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text{
+    font-size: 11px;
+    text-align: center;
+    text-transform: capitalize;
+}

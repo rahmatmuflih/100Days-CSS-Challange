@@ -236,6 +236,36 @@
     stroke: #7BA2FF;
 }
 
+.data-red .dot .value{
+    background-color: #FA7373;
+    bottom: 27px;
+    left: -220%; 
+    transition: 0.2s ease-in-out; 
+    opacity: 0.6;
+}
+
+.data-red .dot .value::after{
+    border-top: 8px solid #FA7373;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+.data-blue .dot .value{
+    background-color: #7BA2FF;
+    bottom: 25px;
+    left: -150%; 
+    transition: 0.2s ease-in-out; 
+    opacity: 0.6;
+}
+
+.data-blue .dot .value::after{
+    border-top: 6px solid #7BA2FF;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid transparent;
+}
+
 .dot .value{
     visibility: hidden;
     position: relative;
@@ -254,41 +284,22 @@
     height: 0;
     padding: 0;
     margin: 0;
-    content: " ";
-}
-
-.dot:hover .value{
-    visibility: visible;
-}
-
-.data-red .dot .value{
-    background-color: #FA7373;
-    bottom: 37px;
-    left: -220%;  
-}
-
-.data-red .dot .value::after{
-    border-top: 8px solid #FA7373;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 5px solid transparent;  
+    content: " ";  
     top: 27px;
     left: 25%;
 }
 
-.data-blue .dot .value{
-    background-color: #7BA2FF;
-    bottom: 0;
-    left: 0%;
+.dot:hover .value{
+    visibility: visible;
+    opacity: 1;
 }
 
-.data-blue .dot .value::after{
-    border-top: 8px solid #7BA2FF;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 5px solid transparent;  
-    top: 0;
-    left: 0%;
+.data-red .dot:hover .value{
+    bottom: 37px;
+}
+
+.data-blue .dot:hover .value{
+    bottom: 35px;
 }
 
 .days{

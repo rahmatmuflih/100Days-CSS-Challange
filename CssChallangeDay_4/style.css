@@ -1,5 +1,5 @@
 :root {
-  --animation: cubic-bezier(0.21, 0.98, 0.6, 0.99);
+  --animation: cubic-bezier(.21,.98,.6,.99);
 }
 
 .frame {
@@ -65,33 +65,30 @@
 }
 
 @keyframes first-child {
-  0%,
-  10% {
+  0%, 10% {
     transform: scale(0);
   }
-  100% {
+  100%{
     transform: scale(1);
     box-shadow: 4px 7px 10px #47424283;
   }
 }
 
 @keyframes second-child {
-  0%,
-  40% {
+  0%,40% {
     transform: scale(0);
   }
-  100% {
+  100%{
     transform: scale(1);
     box-shadow: 4px 7px 10px #47424283;
   }
 }
 
 @keyframes last-child {
-  0%,
-  70% {
+  0%,70% {
     transform: scale(0);
   }
-  100% {
+  100%{
     transform: scale(1);
     box-shadow: 4px 7px 10px #47424283;
   }
