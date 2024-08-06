@@ -31,6 +31,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .report{
     width: 280px;
     height: 220px;
@@ -38,6 +39,7 @@
     border-radius: 3px;
     box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.26);
 }
+
 .detail{
     position: relative;
     color: white;
@@ -46,6 +48,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 .name div:first-child{
     position: relative;
     font-weight: 600;
@@ -54,6 +57,7 @@
     top: 12px;
     left: 15px;
 }
+
 .name div:last-child{
     position: relative;
     font-weight: 400;
@@ -61,6 +65,7 @@
     top: 12px;
     left: 15px;
 }
+
 .revenue div:first-child{
     position: relative;
     top: 14px;
@@ -70,6 +75,7 @@
     text-transform: capitalize;
     text-align: end;
 }
+
 .revenue div:last-child{
     position: relative;
     top: 14px;
@@ -77,11 +83,13 @@
     font-size: 14px;
     font-weight: 600;
 }
+
 .legend{
     display: flex;
     margin: 10px 0 14px;
     justify-content: end;
 }
+
 .legend .pict{
     position: relative;
     width: 11px;
@@ -90,125 +98,204 @@
     top: 8px;
     left: 6px;
 }
+
 .legend .views .pict{
     background-color: #FA7373;
 }
+
 .legend .purchase .pict{
     background-color: #7BA2FF;
 }
+
 .legend .text{
     font-size: 9px;
     text-transform: capitalize;
     color: #606060;
     padding: 0 10px 0 25px;
 }
-.real-graph{
+
+.statistics{
     position: relative;
-    padding: 0 10px;
-    height: 81px;
-    width: 260px;
+    margin: 0 10px;
 }
-.real-graph .h-line{
+
+.h-line{
     position: relative;
     background-color: #F2F2F2;
     height: 1px;
 }
-.real-graph .h-line:nth-child(4){
-    top: 42px;
+
+.h-line:nth-child(2), .h-line:nth-child(3){
+    margin-top: 40px;
 }
-.real-graph .h-line:last-child{
-    top: 80px;
+
+.data-red, .data-blue{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-.dot{
+
+.points .dot{
     position: absolute;
     width: 6px;
     height: 6px;
-    border-radius: 3px;
-    z-index: 10;
-}
-.red-line .dot:hover, .blue-line .dot:hover{
+    border-radius: 6px;
     cursor: pointer;
+    z-index: 20;
+    transition: visibility 2s ease-in-out;
 }
-.dot-value{
-    display: none;
-    position: absolute;
-}
-polyline{
-    fill: none;
-    stroke-width: 3px;
-}
-.red-line{
+
+.data-red .dot{
     background-color: #FA7373;
 }
-.red-line:first-child{
-    left: 7px;
-    top: 47px;
+
+.data-blue .dot{
+    background-color: #7BA2FF;
 }
-.red-line:nth-child(2){
+
+.data-red .points .dot:nth-child(2){
+    left: 7px;
+    top: 43px;
+}
+
+.data-red .points .dot:nth-child(3){
     left: 48px;
     top: 9px;
 }
-.red-line:nth-child(3){
+
+.data-red .points .dot:nth-child(4){
     left: 88px;
     top: 20px;
 }
-.red-line:nth-child(4){
+
+.data-red .points .dot:nth-child(5){
     left: 128px;
     top: 8px;
 }
-.red-line:nth-child(5){
+
+.data-red .points .dot:nth-child(6){
     left: 169px;
     top: 35px;
 }
-.red-line:nth-child(6){
+
+.data-red .points .dot:nth-child(7){
     left: 209px;
     top: 45px;
 }
-.red-line:nth-child(7){
+
+.data-red .points .dot:last-child{
     left: 249px;
     top: 16px;
 }
-.red-polyline{
-    stroke: #FA7373;
-}
-.blue-line .dot{
-    background-color: #7BA2FF;
-}
-.blue-line .dot:first-child{
+
+.data-blue .points .dot:nth-child(2){
     left: 7px;
     top: 58px;
 }
-.blue-line .dot:nth-child(2){
+
+.data-blue .points .dot:nth-child(3){
     left: 48px;
     top: 47px;
 }
-.blue-line .dot:nth-child(3){
+
+.data-blue .points .dot:nth-child(4){
     left: 88px;
     top: 62px;
 }
-.blue-line .dot:nth-child(4){
+
+.data-blue .points .dot:nth-child(5){
     left: 128px;
     top: 52px;
 }
-.blue-line .dot:nth-child(5){
+
+.data-blue .points .dot:nth-child(6){
     left: 169px;
     top: 58px;
 }
-.blue-line .dot:nth-child(6){
+
+.data-blue .points .dot:nth-child(7){
     left: 209px;
     top: 71px;
 }
-.blue-line .dot:nth-child(7){
+
+.data-blue .points .dot:last-child{
     left: 249px;
     top: 61px;
 }
-.blue-line polyline{
+
+.statistics polyline{
+    fill: none;
+    stroke-width: 3;
+}
+
+.statistics .data-red polyline{
+    stroke: #FA7373;
+}
+
+.statistics .data-blue polyline{
     stroke: #7BA2FF;
 }
+
+.dot .value{
+    visibility: hidden;
+    position: relative;
+    width: fit-content;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 11px;
+    padding: 8px 6px;
+    color: white;
+    border-radius: 5px;
+}
+
+.dot .value::after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    content: " ";
+}
+
+.dot:hover .value{
+    visibility: visible;
+}
+
+.data-red .dot .value{
+    background-color: #FA7373;
+    bottom: 37px;
+    left: -220%;  
+}
+
+.data-red .dot .value::after{
+    border-top: 8px solid #FA7373;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 5px solid transparent;  
+    top: 27px;
+    left: 25%;
+}
+
+.data-blue .dot .value{
+    background-color: #7BA2FF;
+    bottom: 0;
+    left: 0%;
+}
+
+.data-blue .dot .value::after{
+    border-top: 8px solid #7BA2FF;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 5px solid transparent;  
+    top: 0;
+    left: 0%;
+}
+
 .days{
     display: flex;
     color: #949494;
 }
+
 .days p{
     width: 14.2857142857%;
     text-align: center;
