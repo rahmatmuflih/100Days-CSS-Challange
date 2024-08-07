@@ -233,6 +233,7 @@
     height: 5px;
     border-radius: 5px;
     border: solid #5f98cd 3px;
+    background-color: white;
 }
 
 .clock{
