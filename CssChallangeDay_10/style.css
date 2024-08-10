@@ -1,0 +1,136 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #4c4c4c;
+  border-radius: 5px;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 240px;
+  height: 240px;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  background-color: #3a3a3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  width: 220px;
+  height: 220px;
+  background-color: #242424;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock > svg {
+  position: absolute;
+  fill: none;
+  stroke: #f85b5b;
+  stroke-width: 3px;
+}
+
+.point {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  /* border: 1px white solid; */
+}
+
+.pointer {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 100%;
+}
+
+.pointer:first-child {
+  left: 90px;
+}
+
+.pointer:nth-child(2) {
+  top: 90px;
+}
+
+.pointer:nth-child(3) {
+  top: 90px;
+  left: 180px;
+}
+
+.pointer:last-child {
+  top: 180px;
+  left: 90px;
+}
+
+.clock-detail {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  font-size: 12px;
+  text-align: center;
+}
+
+.time {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.health {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 2px;
+}
+
+.heart {
+  display: flex;
+}
+
+.heart > svg {
+  fill: #f85b5b;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  animation: heartbeat 0.5s linear infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
