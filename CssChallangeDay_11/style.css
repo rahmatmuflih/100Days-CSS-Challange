@@ -36,6 +36,7 @@
     position: relative;
     width: 400px;
     height: 128px;
+    animation: fade 2s ease-in-out;
 }
 
 .foot {
@@ -44,7 +45,14 @@
     left: 30%;
     width: 152px;
     height: 200px;
+}
+
+.right {
     animation: walk 2s ease-in-out infinite;
+}
+
+.left {
+    animation: walk 2s ease-in-out 1s infinite;
 }
 
 .shoe {
@@ -55,18 +63,60 @@
     background-image: url("https://100dayscss.com/codepen/doc-martens.svg");
 }
 
+.right .shoe {
+    animation: step 2s ease-in-out infinite;
+}
+
+.left .shoe {
+    animation: step 2s ease-in-out 1s infinite;
+}
+
 .ground {
     width: 400px;
     height: 150px;
     background-color: #232323;
 }
 
-@keyframes walk {
-    0% {
-        transform: rotate(25deg);
+@keyframes fade {
+
+    0%,
+    50% {
+        opacity: 0;
     }
 
     100% {
-        transform: rotate(-40deg);
+        opacity: 1;
+    }
+}
+
+@keyframes walk {
+
+    0%,
+    100% {
+        transform: rotate(15deg) translateX(-70px);
+    }
+
+    50% {
+        transform: rotate(-30deg) translateX(70px);
+    }
+}
+
+@keyframes step {
+
+    0%,
+    100% {
+        transform: rotate(0deg) translateX(0) translateY(0px);
+    }
+
+    25% {
+        transform: rotate(0deg) translateX(30px) translateY(-40px);
+    }
+
+    50% {
+        transform: rotate(30deg) translateX(30px) translateY(50px);
+    }
+
+    75% {
+        transform: rotate(15deg) translateX(0) translateY(10px);
     }
 }
