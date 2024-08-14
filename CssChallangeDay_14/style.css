@@ -35,6 +35,7 @@
   justify-content: center;
   align-items: center;
   background-color: #ffce4e;
+  transform-style: preserve-3d;
   box-shadow: 6px 3px 15px rgba(0, 0, 0, 0.871);
   transition: transform 1s ease-in-out;
 }
@@ -45,8 +46,8 @@
 
 .bicycle {
   position: absolute;
-  visibility: visible;
-  transition: visibility 0.01s ease-in-out 0.5s;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
 }
 
 .ani-frame {
@@ -59,7 +60,7 @@
   overflow: hidden;
 }
 
-svg {
+.bicycle svg {
   fill: #4b4841;
   width: 130px;
   animation: motion 0.3s ease-in-out infinite alternate;
@@ -71,7 +72,8 @@ svg {
   top: -25px;
 }
 
-.track {
+.track,
+.cloud {
   background-color: #4b4841;
   border-radius: 10px;
   margin-left: 332px;
@@ -108,32 +110,111 @@ svg {
 
 .helicopter {
   position: absolute;
-  visibility: hidden;
-  transition: visibility 0.01s ease-in-out 0.5s;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate3d(10px, 0, 0, 0deg);
-  }
-  100% {
-    transform: rotate3d(1, 0, 0, 180deg);
-  }
+.helicopter svg {
+  fill: #4b4841;
+  width: 130px;
+  animation: fly 0.3s ease-in-out infinite alternate;
+}
+
+.sky {
+  position: relative;
+}
+
+.cloud {
+  position: absolute;
+  background-color: #4b484196;
+  border-radius: 10px;
+  margin-left: 155px;
+  margin-top: -70px;
+}
+
+.c-1 {
+  width: 20px;
+  height: 9px;
+}
+
+.c-2 {
+  width: 9px;
+  height: 9px;
+  top: 30px;
+}
+
+.c-3 {
+  width: 15px;
+  height: 9px;
+  top: 30px;
+  left: 20px;
+}
+
+.c-4 {
+  width: 25px;
+  height: 9px;
+  top: -40px;
+  left: -20px;
+}
+
+.c-5 {
+  width: 25px;
+  height: 9px;
+  top: -25px;
+  left: 40px;
+}
+
+.c-6 {
+  width: 17px;
+  height: 9px;
+  left: -50px;
+}
+
+.c-7 {
+  width: 24px;
+  height: 9px;
+  top: 50px;
+}
+
+.c-8 {
+  width: 9px;
+  height: 9px;
+  top: 50px;
+  left: -20px;
+}
+
+.c-9 {
+  width: 17px;
+  height: 9px;
+  top: -60px;
+  left: -20px;
 }
 
 @keyframes motion {
   0% {
     transform: scaleY(0.9);
   }
+
   100% {
     transform: scaleY(1);
   }
 }
 
-@keyframes track {
+@keyframes fly {
+  0% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes move {
   0% {
     transform: translate(0);
   }
+
   100% {
     transform: translate(-400px);
   }
