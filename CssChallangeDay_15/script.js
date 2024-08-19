@@ -1,4 +1,5 @@
 const drop = document.getElementById("drop");
+const dropzone = document.querySelector(".file")
 const svg = document.querySelector("label svg");
 const label = document.querySelector("label");
 const buttonUpload = document.querySelector(".button-upload");
@@ -8,17 +9,44 @@ const done = document.querySelector(".done");
 const uploadFile = document.querySelector(".upload-file");
 const loadingFile = document.querySelector(".loading-file");
 const doneUpload = document.querySelector(".done-upload");
+const command = ['drag', 'dragstart', 'dragend', 'dragover', 'dragenter', 'dragleave', 'drop']
 let fileName = [];
 let clicked = false;
+let uploaded = false;
 
 drop.addEventListener('change', function () {
     svg.style.display = 'none';
     fileName = drop.value.split('\\')
-    label.innerHTML = fileName[fileName.length-1];
+    label.innerHTML = fileName[fileName.length - 1];
+    uploaded = true
+});
+
+dropzone.addEventListener("dragenter", function (e) {
+    e.preventDefault();
+    label.style.backgroundColor = "#a1a6ad";
+});
+
+dropzone.addEventListener("dragover", function (e) {
+    e.preventDefault();
+    label.style.backgroundColor = "#a1a6ad";
 })
 
+dropzone.addEventListener("dragleave", function () {
+    label.style.backgroundColor = "white";
+})
+
+dropzone.addEventListener('drop', function (e) {
+    e.preventDefault();
+    svg.style.display = 'none';
+    label.style.backgroundColor = "white"
+    fileName = e.dataTransfer.files;
+    label.innerHTML = fileName[0].name;
+    uploaded = true
+})
+
+
 buttonUpload.addEventListener("click", function () {
-    if ((drop.files.length > 0) && !(clicked)) {
+    if ((uploaded) && !(clicked)) {
         clicked = true;
         loadingProcess.style.width = "250px";
         loadingProcess.style.visibility = "hidden";
@@ -38,4 +66,4 @@ buttonUpload.addEventListener("click", function () {
             doneUpload.style.display = "inline";
         }, 3000);
     }
-})
+});

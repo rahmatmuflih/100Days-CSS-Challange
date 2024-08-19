@@ -28,7 +28,7 @@
     height: 150px;
     border-radius: 100%;
     top: -150px;
-    animation: bounce 5s ease-in-out infinite;
+    animation: ball 5s ease-in-out infinite;
 }
 
 .circle-impact {
@@ -37,62 +37,372 @@
     width: 200px;
     height: 200px;
     border-radius: 100%;
-    animation: impact 5s ease-in-out infinite;
+    animation: ball-impact 5s ease-in-out infinite;
 }
 
-@keyframes impact {
+.triangle {
+    position: absolute;
+    fill: white;
+    width: 150px;
+    animation: triangle 5s ease-in-out infinite;
+}
+
+.triangle-line {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+
+.triangle-line .line {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+.triangle-line .line::before,
+.octagon-line .line::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.l-1 {
+    top: 15px;
+    left: 73px;
+    transform: rotate(0deg) translateY(25px);
+}
+
+.l-1::before {
+    content: '';
+    animation: triangle-impact-1 5s ease-in-out infinite;
+}
+
+.l-2 {
+    top: 8px;
+    left: 124px;
+    transform: rotate(-55deg) translateY(5px);
+}
+
+.l-2::before {
+    content: '';
+    animation: triangle-impact-2 5s ease-in-out infinite;
+}
+
+.l-3 {
+    top: 108px;
+    left: -11px;
+    transform: rotate(55deg) translateY(45px);
+}
+
+.l-3::before {
+    content: '';
+    animation: triangle-impact-2 5s ease-in-out infinite;
+}
+
+.octagon {
+    position: absolute;
+    fill: white;
+    width: 150px;
+    transform: rotate(22deg);
+    animation: octagon 5s ease-in-out infinite;
+}
+
+.octagon-line {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+.octagon-line .line {
+    position: absolute;
+    width: 3px;
+    height: 75px;
+}
+
+.o-1 {
+    top: -5px;
+    left: 72px;
+    transform: translateY(20px);
+}
+
+.o-1::before {
+    content: "";
+    animation: octagon-impact-1 5s ease-in-out infinite;
+}
+
+.o-2 {
+    top: -5px;
+    left: 30px;
+    transform: rotate(-45deg) translateY(41px);
+}
+
+.o-2::before {
+    content: "";
+    animation: octagon-impact-1 5s ease-in-out infinite;
+}
+
+.o-3 {
+    top: -10px;
+    left: 120px;
+    transform: rotate(45deg) translateY(45px);
+}
+
+.o-3::before {
+    content: "";
+    animation: octagon-impact-1 5s ease-in-out infinite;
+}
+
+.o-4 {
+    top: 38px;
+    left: 5px;
+    transform: rotate(-90deg) translateY(46px);
+}
+
+.o-4::before {
+    content: "";
+    animation: octagon-impact-1 5s ease-in-out infinite;
+}
+
+.o-5 {
+    top: 36px;
+    left: 140px;
+    transform: rotate(90deg) translateY(46px);
+}
+
+.o-5::before {
+    content: "";
+    animation: octagon-impact-1 5s ease-in-out infinite;
+}
+
+.o-6 {
+    top: 85px;
+    left: 25px;
+    transform: rotate(45deg) translateY(0px);
+}
+
+.o-6::before {
+    content: "";
+    animation: octagon-impact-2 5s ease-in-out infinite;
+}
+
+.o-7 {
+    top: 95px;
+    left: 74px;
+    transform: rotate(180deg) translateY(34px);
+}
+
+.o-7::before {
+    content: "";
+    animation: octagon-impact-1 5s ease-in-out infinite;
+}
+
+.o-8 {
+    top: 85px;
+    left: 120px;
+    transform: rotate(-45deg) translateY(0px);
+}
+
+.o-8::before {
+    content: "";
+    animation: octagon-impact-2 5s ease-in-out infinite;
+}
+
+@keyframes ball {
+
+    0% {
+        transform: translateY(0px) scaleY(1) scaleX(1);
+    }
+
+    6% {
+        transform: translateY(270px) scaleY(1) scaleX(1);
+    }
+
+    8% {
+        transform: translateY(310px) scaleY(0.6) scaleX(1);
+    }
+
+    11% {
+        transform: translateY(200px) scaleY(1) scaleX(0.9);
+    }
+
+    15%,
+    16% {
+        transform: translateY(270px) scaleY(1) scaleX(1);
+    }
+
+    21% {
+        transform: translateY(270px) scale(1.4);
+    }
+
+    25%,
+    65% {
+        transform: translateY(270px) scale(0);
+    }
+
+    70%,
+    75% {
+        transform: translateY(270px) scale(1);
+    }
+
+    80% {
+        transform: translateY(240px) scale(1);
+    }
+
+    100% {
+        transform: translateY(800px) scaleY(1) scaleX(1);
+    }
+}
+
+@keyframes ball-impact {
+
+    0%,
+    65% {
+        opacity: 1;
+        transform: scale(0);
+    }
+
+    65.000001% {
+        opacity: 1;
+        transform: scale(0);
+    }
+
+    72%,
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes octagon {
+
+    0%,
+    25% {
+        transform: rotate(22deg) scale(0);
+    }
+
+    30%,
+    35% {
+        transform: rotate(22deg) scale(1);
+    }
+
+    40% {
+        transform: rotate(22deg) scale(1.4);
+    }
+
+    45%,
+    100% {
+        transform: rotate(22deg) scale(0);
+    }
+
+}
+
+@keyframes octagon-impact-1 {
+
+    0%,
+    25% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    25.000001% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    31%,
+    100% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+}
+
+@keyframes octagon-impact-2 {
+
+    0%,
+    25% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    25.000001% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    31%,
+    100% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+}
+
+
+@keyframes triangle {
 
     0%,
     45% {
         transform: scale(0);
-        opacity: 1;
     }
 
-    55%,
-    100% {
+    50%,
+    55% {
         transform: scale(1);
-        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.4);
+    }
+
+    65%,
+    100% {
+        transform: scale(0);
     }
 
 }
 
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
+@keyframes triangle-impact-1 {
 
-    15% {
-
-        transform: translateY(275px);
-    }
-
-    27% {
-        transform: translateY(275px) scaleY(0.9);
-    }
-
-    30% {
-        transform: translateY(245px) scaleX(0.8) scaleY(1);
-    }
-
-    35% {
-        transform: translateY(275px) scaleY(0.9);
-    }
-
-    40% {
-        transform: translateY(275px) scaleX(1) scaleY(1);
-    }
-
+    0%,
     45% {
-        transform: translateY(275px) scale(0);
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    45.000001% {
+        opacity: 1;
+        transform: translateY(0px);
     }
 
     50%,
-    50.5% {
-        transform: translateY(275px) scale(1);
+    100% {
+        opacity: 0;
+        transform: translateY(-80px);
     }
 
+}
+
+@keyframes triangle-impact-2 {
+
+    0%,
+    45% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    45.000001% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    50%,
     100% {
-        transform: translateY(600px);
+        opacity: 0;
+        transform: translateY(80px);
     }
 
 }
