@@ -1,50 +1,67 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 
 .frame {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    height: 400px;
-    margin-top: -200px;
-    margin-left: -200px;
-    border-radius: 5px;
-    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    background-image: repeating-linear-gradient(45deg,
-            #353535,
-            #353535 5px,
-            white 6px,
-            white 35px);
-    color: #333;
-    font-family: 'Open Sans', Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #353535,
+    #353535 5px,
+    white 6px,
+    white 35px
+  );
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 250px;
-    height: 250px;
-    background-color: #353535;
-    border-radius: 5px;
-    transform: translate(-50%, -50%);
-    box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.637);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-svg {
-    border: 1px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  background-color: #353535;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.637);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .side-1 {
-    fill: #eeeeee;
+  fill: #eeeeee;
+  transition: fill 0.5s ease-in-out;
 }
 
-.side-1:hover {
-    fill: #aaaaaa;
+svg:hover .side-1 {
+  fill: #aaaaaa;
+}
+
+.side-2 {
+  fill: #aaaaaa;
+  transition: fill 0.5s ease-in-out;
+}
+
+svg:hover .side-2 {
+  fill: #cccccc;
+}
+
+.side-3 {
+  fill: #cccccc;
+  transition: fill 0.5s ease-in-out;
+}
+
+svg:hover .side-3 {
+  fill: #eeeeee;
 }
