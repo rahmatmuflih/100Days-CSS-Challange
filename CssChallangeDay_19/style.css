@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #fff;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.carousel {
+    width: 1200px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+}
+
+.purple {
+    width: 400px;
+    height: 400px;
+    background-color: #9c59b6;
+    transition: margin-left 1s ease-in-out;
+}
+
+.blue {
+    width: 400px;
+    height: 400px;
+    background-color: #3498db;
+}
+
+.green {
+    width: 400px;
+    height: 400px;
+    background-color: #1abc9c;
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 5px;
+    z-index: 1;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.clicked {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: white;
+    top: 7px;
+    left: 7px;
+    transition: left 0.6s ease-in-out;
+
+    /* left: 76px; */
+
+    /* left: 145px; */
+}
