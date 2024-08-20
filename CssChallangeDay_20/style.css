@@ -64,10 +64,9 @@ svg {
 }
 
 .plane {
-  margin-top: -20px;
   stroke-width: 2px;
   overflow: visible;
-  transform: rotate(45deg) translate(-100px);
+  transform: rotate(45deg) translateX(-125px);
   display: none;
 }
 
