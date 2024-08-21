@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #2c2e2e;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pacman {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  fill: transparent;
+  stroke: #f4d146;
+  stroke-width: 100px;
+  border-radius: 100%;
+  stroke-dasharray: 315px;
+  stroke-dashoffset: 0px;
+  z-index: 1;
+  animation: waka 0.5s ease-in-out infinite alternate;
+}
+
+.eye {
+  position: absolute;
+  fill: #2c2e2e;
+  overflow: visible;
+  z-index: 1;
+  transform: rotate(-25deg);
+}
+
+.eye circle {
+  animation: eye 0.5s ease-in-out infinite alternate;
+}
+
+.foods {
+  width: 200px;
+  height: 40px;
+  margin-left: 200px;
+  stroke: #f4d146;
+  stroke-width: 22px;
+  stroke-dasharray: 0px 54px;
+  stroke-dashoffset: 22px;
+  stroke-linecap: round;
+  overflow: visible;
+  animation: foods 1s linear infinite;
+}
+
+@keyframes waka {
+  0% {
+    transform: rotate(0deg);
+    stroke-dashoffset: 0px;
+  }
+
+  100% {
+    transform: rotate(45deg);
+    stroke-dashoffset: 80px;
+  }
+}
+
+@keyframes eye {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-7deg);
+  }
+}
+
+@keyframes foods {
+  from {
+    stroke-dashoffset: 22px;
+  }
+  to {
+    stroke-dashoffset: 128px;
+  }
+}

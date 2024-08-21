@@ -16,17 +16,18 @@
   font-family: "Open Sans", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: -30px;
   width: 200px;
   height: 200px;
   border-radius: 100%;
-  border: 3px solid #354a5f;
+  border: 10px solid #354a5f;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,34 +60,160 @@ svg {
 }
 
 .envelope path {
+  stroke-dasharray: 325px;
   stroke-dashoffset: 0px;
-  stroke-dasharray: 0px;
 }
 
 .plane {
+  margin-top: 1px;
+  margin-left: 1px;
   stroke-width: 2px;
   overflow: visible;
-  transform: rotate(45deg) translateX(-125px);
-  display: none;
+  transform: rotate(45deg) translateX(-123px) translateY(0px);
+}
+
+.plane path {
+  stroke-dashoffset: 370px;
+  stroke-dasharray: 370px;
 }
 
 .send {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  content: "send mail";
+  top: 35px;
   padding: 10px;
   background-color: white;
   width: 200px;
+  height: 22px;
   border-radius: 30px;
   text-align: center;
   text-transform: uppercase;
   color: black;
   font-weight: 600;
   cursor: pointer;
+  user-select: none;
+}
+
+.send::before {
+  content: "send mail";
+}
+
+.animate::before {
+  animation: content 3.9s ease-in-out 3.9s 1 forwards;
 }
 
 .send:hover {
   background-color: #1abc9c;
   color: white;
+}
+
+@keyframes envelope {
+  from {
+    stroke-dashoffset: 0px;
+  }
+
+  to {
+    stroke-dashoffset: 325px;
+  }
+}
+
+@keyframes container {
+  0% {
+    transform: scale(1);
+  }
+
+  20%,
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes wrapper {
+  0% {
+    transform: scale(1);
+  }
+
+  10%,
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes plane {
+  0% {
+    stroke-dashoffset: 370px;
+    transform: translateY(0px);
+  }
+
+  50% {
+    stroke-dashoffset: 0px;
+    transform: translateY(0px);
+  }
+
+  60% {
+    stroke-dashoffset: 0px;
+    transform: translateY(20px);
+  }
+
+  100% {
+    stroke-dashoffset: 0px;
+    transform: translateY(-350px);
+  }
+}
+
+@keyframes send {
+  0% {
+    background-color: white;
+    color: black;
+    transform: scale(1);
+  }
+
+  10% {
+    background-color: #1abc9c;
+    color: white;
+    transform: scale(1);
+  }
+
+  40%,
+  50% {
+    width: 20px;
+    transform: scale(1);
+  }
+
+  60% {
+    width: 20px;
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  60.001% {
+    width: 200px;
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes content {
+  0%,
+  10% {
+    content: "send Mail";
+  }
+
+  20%,
+  60% {
+    content: "";
+  }
+
+  60.001%,
+  100% {
+    content: "reset";
+  }
 }

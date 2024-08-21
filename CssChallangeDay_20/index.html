@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <div class="frame">
-    <div class="container">
-      <div class="wrapper"></div>
+  <body>
+    <div class="frame">
+      <div class="container">
+        <div class="wrapper"></div>
+      </div>
+      <svg class="envelope" xmlns="http://www.w3.org/2000/svg">
+        <path d="M150 40 L0 40 L75 85Z" />
+        <path d="M150 40 L150 125 L0 125 L0 40" />
+      </svg>
+      <svg class="plane" xmlns="http://www.w3.org/2000/svg">
+        <path d="M118 0 L30 130 L140 88 L119 0Z" />
+        <path d="M118 0 L65 117 L95 150 L108 100" />
+      </svg>
+      <div class="send"></div>
     </div>
-    <svg class="envelope" xmlns="http://www.w3.org/2000/svg">
-      <path d="
-        M0 40 L150 40 L150 125 L0 125 L0 40
-        L75 85 L150 40Z
-      " />
-    </svg>
-    <svg class="plane" xmlns="http://www.w3.org/2000/svg">
-      <path d="
-        M150 100 L120 0 L0 130 L150 100 L120 0
-        L65 117 L95 150 L110 108Z
-      " />
-    </svg>
-    <div class="send">Send Mail</div>
-  </div>
-  <script src="./script.js"></script>
-</body>
-
+    <script src="./script.js"></script>
+  </body>
 </html>
