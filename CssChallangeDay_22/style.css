@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-image: linear-gradient(to top, #183038, #28404e);
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    margin: 50px 0 20px;
+}
+
+h1 span {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.stats {
+    width: 90px;
+    height: 90px;
+    border: 15px solid #1b2a33;
+    border-radius: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.run {
+    display: flex;
+    margin: 10px 0;
+    gap: 30px;
+    justify-content: center;
+}
+
+.run .stats {
+    width: 75px;
+    height: 75px;
+    border: 10px solid #1b2a33;
+    margin: 0;
+}
+
+p {
+    text-align: center;
+    font-size: 28px;
+    line-height: 0.8;
+    font-weight: 500;
+}
+
+p span {
+    color: #2d6288;
+    font-size: 18px;
+}
+
+.run p {
+    font-size: 23px;
+}
+
+.run span {
+    font-size: 16px;
+}
+
+svg {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke: #27e1af;
+    stroke-width: 14px;
+    stroke-dasharray: 365px;
+    stroke-dashoffset: 365px;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+}
+
+.calori svg {
+    animation: calori 1.5s ease-in-out 1 forwards;
+}
+
+.run svg {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    stroke: #5ce0ec;
+    stroke-width: 10px;
+    stroke-dasharray: 270px;
+    stroke-dashoffset: 270px;
+}
+
+.step svg {
+    animation: walk 1.5s ease-in-out 1 forwards;
+}
+
+.km svg {
+    animation: km 1.5s ease-in-out 1 forwards;
+}
+
+@keyframes calori {
+    from {
+        stroke-dashoffset: 365px;
+    }
+
+    to {
+        stroke-dashoffset: 105px;
+    }
+}
+
+@keyframes walk {
+    from {
+        stroke-dashoffset: 270px;
+    }
+
+    to {
+        stroke-dashoffset: 100px;
+    }
+}
+
+@keyframes km {
+    from {
+        stroke-dashoffset: 270px;
+    }
+
+    to {
+        stroke-dashoffset: 160px;
+    }
+}
