@@ -1,0 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-image: linear-gradient(45deg, #fda331, #fdc931);
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: white;
+    width: 250px;
+    height: 300px;
+    color: #497081;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.281);
+}
+
+.wrapper {
+    margin: 20px 30px;
+}
+
+.center h1 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.center h2 {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.separator {
+    margin: 20px 0;
+    border-bottom: 1px solid #d4dce0;
+}
+
+.list {
+    position: relative;
+    width: 100%;
+}
+
+.list-item {
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+svg {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 0px;
+    fill: none;
+    stroke: #497081;
+    cursor: pointer;
+}
+
+.circle {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.check {
+    margin-top: -5px;
+    stroke-width: 2px;
+    stroke-dasharray: 25px;
+    stroke-dashoffset: 25px;
+}

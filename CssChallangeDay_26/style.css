@@ -22,5 +22,115 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 250px;
+  height: 150px;
+  background-color: white;
+  border-radius: 4px;
+  color: #63707f;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 0;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.219);
+}
+
+.q-1 {
+  z-index: 1;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+  animation: q-1 0.7s ease-in-out 1;
+}
+
+.number {
+  position: absolute;
+  font-size: 15px;
+  top: -35px;
+  right: -30px;
+  display: flex;
+  align-items: center;
+  color: white;
+  transform: rotate(-45deg);
+  width: 60px;
+  height: 70px;
+  background-color: #8391a1;
+}
+
+.number span {
+  margin-top: 5px;
+  margin-left: 10px;
+  transform: rotate(45deg);
+}
+
+.title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 200px;
   transform: translate(-50%, -50%);
+}
+
+.title h1 {
+  margin: 20px -10px;
+  text-align: center;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 200px;
+  transform: translate(-50%, -50%);
+}
+
+.content p {
+  margin: 0 15px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.button {
+  position: absolute;
+  top: 74%;
+  left: 50%;
+  width: 200px;
+  transform: translate(-50%, -50%);
+  margin-top: 18px;
+  width: 255px;
+  height: 50px;
+  background-color: #3ca8fb;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button::before {
+  position: absolute;
+  content: "ok";
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button:hover {
+  background-color: #2196f3;
+}
+
+@keyframes q-1 {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+    opacity: 1;
+  }
 }

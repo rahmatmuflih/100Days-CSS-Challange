@@ -1,0 +1,222 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #dd3c54;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hanger {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: white;
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: white;
+  width: 100px;
+  height: 110px;
+  overflow: visible;
+  transform-origin: top;
+  animation: bell 2.5s ease infinite;
+}
+
+.group-right {
+  position: relative;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+
+.wave {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  opacity: 0;
+}
+
+.right {
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid white;
+}
+
+.left {
+  left: 55%;
+  border-top: 5px solid transparent;
+  border-left: 5px solid white;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.r-1 {
+  animation: wr-1 2.5s ease-out infinite both;
+}
+
+.r-2 {
+  animation: wr-2 2.5s ease-out infinite both;
+}
+
+.r-3 {
+  animation: wr-3 2.5s ease-out infinite both;
+}
+
+.l-1 {
+  animation: wl-1 2.5s ease-out infinite both;
+}
+
+.l-2 {
+  animation: wl-2 2.5s ease-out infinite both;
+}
+
+.l-3 {
+  animation: wl-3 2.5s ease-out infinite both;
+}
+
+@keyframes bell {
+  0%,
+  50%,
+  100% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  5%,
+  10%,
+  15%,
+  20%,
+  25%,
+  30%,
+  35%,
+  40% {
+    transform: translate(-50%, -50%) rotate(6deg);
+  }
+  45% {
+    transform: translate(-50%, -50%) rotate(4deg);
+  }
+  7.5%,
+  12.5%,
+  17.5%,
+  22.5%,
+  27.5%,
+  32.5%,
+  37.5%,
+  42.5% {
+    transform: translate(-50%, -50%) rotate(-6deg);
+  }
+  47.5% {
+    transform: translate(-50%, -50%) rotate(-2deg);
+  }
+}
+
+@keyframes wr-1 {
+  0% {
+    transform: translate(-50%, -50%) translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  50%,
+  100% {
+    transform: translate(-50%, -50%) translate3d(60px, 0, 0) scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes wr-2 {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-50%, -50%) translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  70%,
+  100% {
+    transform: translate(-50%, -50%) translate3d(60px, 0, 0) scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes wr-3 {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40% {
+    transform: translate(-50%, -50%) translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    transform: translate(-50%, -50%) translate3d(60px, 0, 0) scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes wl-1 {
+  0% {
+    transform: translate(-50%, -50%) translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  50%,
+  100% {
+    transform: translate(-50%, -50%) translate3d(-60px, 0, 0) scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes wl-2 {
+  0%,
+  19% {
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-50%, -50%) translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  70%,
+  100% {
+    transform: translate(-50%, -50%) translate3d(-60px, 0, 0) scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes wl-3 {
+  0%,
+  39% {
+    opacity: 0;
+  }
+  40% {
+    transform: translate(-50%, -50%) translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  90%,
+  100% {
+    transform: translate(-50%, -50%) translate3d(-60px, 0, 0) scale(2);
+    opacity: 0;
+  }
+}

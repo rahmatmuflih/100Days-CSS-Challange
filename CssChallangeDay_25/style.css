@@ -69,7 +69,7 @@ svg {
 }
 
 .map {
-  fill: yellow;
+  fill: #ffcb30;
   width: 80px;
   height: 80px;
   z-index: 1;
@@ -146,6 +146,7 @@ img {
   from {
     transform: scaleY(0.8) rotate3d(1, 0, 0, 70deg) scale(1);
   }
+
   to {
     transform: scaleY(0.8) rotate3d(1, 0, 0, 70deg) scale(0.6);
   }
