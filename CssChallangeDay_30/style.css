@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 5px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #16a084;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}
+
+.circle {
+    position: absolute;
+    border: 3px solid white;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+}
+
+.ripple-1 {
+    top: 100px;
+    left: 100px;
+    animation: ripple-1 7s ease-in-out infinite;
+}
+
+.ripple-2 {
+    top: 200px;
+    right: 90px;
+    animation: ripple-2 7s ease-in-out infinite;
+}
+
+.ripple-3 {
+    top: 300px;
+    left: 100px;
+    animation: ripple-3 7s ease-in-out infinite;
+}
+
+.center svg {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    fill: none;
+    stroke: white;
+    stroke-width: 5px;
+    stroke-linecap: round;
+    stroke-dasharray: 40px 1450px;
+    stroke-dashoffset: 0px;
+    animation: oouline 7s ease-in-out infinite;
+}
+
+@keyframes oouline {
+    0% {
+        stroke-dashoffset: 50px;
+    }
+
+    100% {
+        stroke-dashoffset: -1450px;
+    }
+}
+
+@keyframes ripple-1 {
+
+    0%,
+    36% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    38% {
+        opacity: 1;
+    }
+
+    45%,
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes ripple-2 {
+
+    0%,
+    50% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    52% {
+        opacity: 1;
+    }
+
+    59%,
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes ripple-3 {
+
+    0%,
+    64% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    65% {
+        opacity: 1;
+    }
+
+    72%,
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}

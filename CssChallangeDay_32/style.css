@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(45deg, #cf5a2a, #fbac3b);
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 100px;
+  height: 40px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.548);
+}
+
+.minus,
+.plus {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.minus:hover,
+.plus:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.minus {
+  font-size: 50px;
+  color: #e26e6e;
+  margin-left: -10px;
+}
+
+.minus::before {
+  content: "_";
+  position: absolute;
+  top: -30px;
+}
+
+.minus:hover {
+  background-color: #e26e6e;
+}
+
+.plus {
+  color: #8ed273;
+  margin-right: -10px;
+}
+
+.plus::before {
+  content: "+";
+  position: absolute;
+  margin-bottom: 2px;
+}
+
+.plus:hover {
+  background-color: #8ed273;
+}
+
+.number {
+  font-size: 30px;
+  font-weight: 600;
+  color: #a68b9e;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes plus {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes minus {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+}
