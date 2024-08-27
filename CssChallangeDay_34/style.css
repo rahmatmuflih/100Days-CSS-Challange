@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #ea4c89;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: 320px;
+  height: 200px;
+}
+
+.line-top,
+.line-bottom {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 2px;
+  background: white;
+  z-index: 0;
+  left: 50%;
+}
+
+.line-top {
+  top: 20%;
+}
+
+.line-bottom {
+  top: 75%;
+}
+
+.curtain-right,
+.curtain-left {
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+  height: 150px;
+  background-color: #ea4c89;
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+}
+
+.curtain-right {
+  top: 50%;
+  left: 73%;
+  transform: translate(-50%, -50%) translateX(0px);
+  /* animation: curtain-right 1s ease-in-out 1 forwards; */
+}
+
+.curtain-left {
+  top: 50%;
+  left: 27%;
+  transform: translate(-50%, -50%) translateX(0px);
+  /* animation: curtain-left 1s ease-in-out 1 forwards; */
+}
+
+.muflih {
+  position: absolute;
+  z-index: -1;
+  width: 300px;
+  height: 100px;
+  top: 43px;
+  left: 10px;
+  fill: none;
+  stroke: white;
+  stroke-width: 10px;
+  stroke-dasharray: 520px;
+  /* stroke-dashoffset: 520px; */
+  /* animation: muflih 1.5s ease-in-out 0.6s 1 forwards; */
+}
+
+@keyframes curtain-right {
+  from {
+    transform: translate(-50%, -50%) translateX(0px);
+  }
+  to {
+    transform: translate(-50%, -50%) translateX(200px);
+  }
+}
+
+@keyframes curtain-left {
+  from {
+    transform: translate(-50%, -50%) translateX(0px);
+  }
+  to {
+    transform: translate(-50%, -50%) translateX(-200px);
+  }
+}
+
+@keyframes muflih {
+  from {
+    stroke-dashoffset: 520px;
+  }
+  to {
+    stroke-dashoffset: 0px;
+  }
+}

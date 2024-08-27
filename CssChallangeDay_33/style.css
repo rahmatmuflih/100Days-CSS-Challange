@@ -8,10 +8,10 @@
   height: 400px;
   margin-top: -200px;
   margin-left: -200px;
-  border-radius: 2px;
+  border-radius: 5px;
   box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background: #fff;
+  background: #75c2e8;
   color: #333;
   font-family: "Open Sans", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -23,4 +23,49 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.sun {
+  width: 90px;
+  height: 90px;
+  fill: #ffd93c;
+  position: absolute;
+  top: 20px;
+  left: 80px;
+}
+
+.cloud {
+  stroke: white;
+  fill: white;
+  width: 397px;
+  height: 200px;
+  position: absolute;
+  top: 50px;
+  animation: cloud 120s ease-in-out infinite alternate;
+}
+
+.c-1 {
+  transform: translateX(280px) scale(0.5);
+}
+
+.c-2 {
+  transform: translateX(160px) translateY(30px) scale(0.7);
+}
+
+.c-3 {
+  transform: translateX(250px) translateY(90px) scale(1.2);
+}
+
+@keyframes cloud {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-300px);
+  }
+
+  100% {
+    transform: translateX(200px);
+  }
 }
