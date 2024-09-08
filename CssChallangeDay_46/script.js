@@ -25,7 +25,7 @@ for (let i = 0; i < 6; i++) {
           height: ${(i + 2) * 1.9}px;
           transform: translateY(${i - 5}px);
           top: ${(i + 1) * 0.15 * 55}%;
-          opacity: ${1 - (7 - (i + 1)) / 10};
+          opacity: ${1 - (6 - (i + 1)) / 10};
           animation: inOut-${i + 1} 6s ease-in-out alternate infinite;
         }
         
@@ -35,7 +35,7 @@ for (let i = 0; i < 6; i++) {
           }
 
           100% {
-            transform: translate(${i + 15}px, ${i - 40}px) scale(1);
+            transform: translate(${i + 15}px, ${i - 40}px) scale(0.9);
           }
         }
       `
