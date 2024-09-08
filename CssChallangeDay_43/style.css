@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #404556;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lightbulb {
+  position: absolute;
+  top: -105px;
+  left: -55px;
+  width: 100px;
+  height: 120px;
+  cursor: pointer;
+}
+
+.lightbulb path {
+  fill: #fff35c;
+  transition: fill 1s ease-in-out;
+}
+
+.lightbulb path:hover {
+  fill: #8c8f99;
+}
+
+.glow {
+  position: absolute;
+  top: -90px;
+  left: -43px;
+  width: 75px;
+  height: 75px;
+  background-color: #fff35c;
+  border-radius: 100%;
+  box-shadow: 0 0 75px #fff35c;
+  z-index: -1;
+  transition: box-shadow 1s ease-in-out;
+}
+
+.lightbulb-bottom {
+  position: absolute;
+  margin: auto;
+  width: 50px;
+  transform: translate(-30px, 20px);
+}
+
+.lb-1,
+.lb-2 {
+  width: 50px;
+  height: 10px;
+  border-radius: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  background-color: #e5e5e5;
+}
+
+.lb-2,
+.lb-3 {
+  margin-top: 4px;
+}
+
+.lb-3 {
+  width: 20px;
+  border-top: 15px solid #e5e5e5;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-radius: 10px;
+}

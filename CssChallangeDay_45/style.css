@@ -1,0 +1,78 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #5ca4ea;
+  color: #333333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.button,
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+
+.button {
+  text-transform: uppercase;
+  padding: 20px 40px;
+  border: 1px #ffffff28 solid;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 1.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #4f95da;
+}
+
+svg {
+  z-index: 0;
+  width: 170px;
+  height: 70px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1;
+}
+
+path {
+  position: absolute;
+  stroke-dashoffset: 0px;
+  stroke-dasharray: 0px 455px;
+}
+
+@keyframes bling {
+  0% {
+    stroke-dashoffset: 0px;
+    stroke-dasharray: 0px 455px;
+  }
+
+  10% {
+    stroke-dashoffset: 0px;
+    stroke-dasharray: 15px 455px;
+  }
+
+  90% {
+    stroke-dashoffset: -455px;
+    stroke-dasharray: 15px 455px;
+  }
+
+  100% {
+    stroke-dashoffset: -455px;
+    stroke-dasharray: 0px 455px;
+  }
+}
