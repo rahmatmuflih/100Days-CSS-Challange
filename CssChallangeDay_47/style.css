@@ -11,23 +11,24 @@
   border-radius: 5px;
   box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  background: #e24e3f;
   color: #333;
+  background: #fff;
   font-family: "Open Sans", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-wrap: wrap;
-  gap: 1px;
 }
 
 .square {
+  box-sizing: border-box;
   background-color: #de4738;
   cursor: pointer;
-  width: 19px;
-  height: 19px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e24e3f;
 }
 
-.square:hover{
-    background-color: #EC5142;
+.square:hover {
+  background-color: #ec5142;
 }
