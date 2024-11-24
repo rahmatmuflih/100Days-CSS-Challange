@@ -41,9 +41,14 @@
   height: 20px;
   background-color: #2ecc71;
   border-radius: 100%;
-  transition: transform 0.3s ease;
-  z-index: 2;
+  transition: transform 0.3s ease-out;
   pointer-events: none;
+}
+
+.square {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
 }
 
 @keyframes impact {

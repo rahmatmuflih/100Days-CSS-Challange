@@ -17,13 +17,12 @@ for (let i = 0; i < 6; i++) {
         .dot-${i + 1}{
           width: ${(i + 1) * 30}px;
           height: ${(i + 1) * 30}px;
-          animation: inIt-${i + 1} 6s ease-in-out alternate infinite;
         }
 
         .dot-${i + 1}::before {
           width: ${(i + 2) * 1.9}px;
           height: ${(i + 2) * 1.9}px;
-          transform: translateY(${i - 5}px);
+          transform: translateY(${(i - 5) * i}px);
           top: ${(i + 1) * 0.15 * 55}%;
           opacity: ${1 - (6 - (i + 1)) / 10};
           animation: inOut-${i + 1} 6s ease-in-out alternate infinite;
@@ -31,11 +30,11 @@ for (let i = 0; i < 6; i++) {
         
         @keyframes inOut-${i + 1}{
           0% {
-            transform: translate(${i + 5}px, ${i - 5}px) scale(0.8);
+            transform: translate(${i + 5}px, ${i - 5}px) scale(${0.8});
           }
 
           100% {
-            transform: translate(${i + 15}px, ${i - 40}px) scale(0.9);
+            transform: translate(${i + 15}px, ${i - 40}px) scale(${0.9});
           }
         }
       `

@@ -1,13 +1,18 @@
 const frame = document.querySelector(".frame");
 const circle = document.querySelector(".circle");
+const square = [];
 
-frame.addEventListener("mousemove", function (e) {
-  const rect = e.target.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-  circle.style.transform = `translate(${x - 10}px, ${y - 10}px)`;
-});
+for (let i = 0; i < 400; i++) {
+  square.push(document.createElement("div"));
+  square[i].classList.add("square");
+  frame.appendChild(square[i]);
+  square[i].addEventListener("mouseover", function () {
+    circle.style.transform = `translate(${
+      (i - (i < 20 ? 0 : 20 * Math.floor(i / 20))) * 20
+    }px, ${Math.floor(i / 20) * 20}px)`;
+  });
+}
 
 frame.addEventListener("mouseleave", function () {
-  circle.style.transform = `translate(190px, 190px)`;
+  circle.style.transform = "translate(190px, 190px)";
 });

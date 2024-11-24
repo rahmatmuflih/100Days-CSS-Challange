@@ -33,7 +33,7 @@ svg {
   border: 1px #ffffff28 solid;
   cursor: pointer;
   z-index: 1;
-  transition: background-color 1.2s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .button:hover {
@@ -51,28 +51,14 @@ svg {
 
 path {
   position: absolute;
-  stroke-dashoffset: 0px;
-  stroke-dasharray: 0px 455px;
+  stroke-dashoffset: 15px;
+  stroke-dasharray: 15px 455px;
+  pointer-events: none;
+  transition: stroke-dashoffset 0.9s ease-in-out,
+    stroke-dasharray 0.9s ease-in-out;
 }
 
-@keyframes bling {
-  0% {
-    stroke-dashoffset: 0px;
-    stroke-dasharray: 0px 455px;
-  }
-
-  10% {
-    stroke-dashoffset: 0px;
-    stroke-dasharray: 15px 455px;
-  }
-
-  90% {
-    stroke-dashoffset: -455px;
-    stroke-dasharray: 15px 455px;
-  }
-
-  100% {
-    stroke-dashoffset: -455px;
-    stroke-dasharray: 0px 455px;
-  }
+.button:hover + svg > path {
+  stroke-dashoffset: -455px;
+  stroke-dasharray: 15px 455px;
 }
